@@ -29,8 +29,8 @@ function Particle(x, y) {
     for (var i = 0; i < this.history.length; i++) {
       noStroke();      
       var pos = this.history[i];
-      fill(180, 50, 100);
-      ellipse(pos.x, pos.y, i, i);
+      fill(255, 30);
+      ellipse(pos.x, pos.y, i*2, i*2);
       // vertex(pos.x, pos.y);
     }
     endShape();
