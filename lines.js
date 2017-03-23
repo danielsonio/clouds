@@ -10,17 +10,20 @@ function setup() {
 	var canvas = createCanvas(windowWidth, windowHeight);
 	
 	timePush();
+	canvas.mousePressed(particlePush);
 
 }
 
 function timePush() {
 	setInterval(pushLine, 400);
-  	setInterval(particlePush, 500);	
+  	// setInterval(particlePush, 500);	
 }
 
 
+
+
 function particlePush() {
-  particles.push(new Particle(random(width), random(height)));
+  particles.push(new Particle(mouseX, mouseY));
   if(particles.length > 8) {
     particles.splice(0, 1);
   }

@@ -29,7 +29,7 @@ function Particle(x, y) {
     for (var i = 0; i < this.history.length; i++) {
       noStroke();      
       var pos = this.history[i];
-      fill(255, 30);
+      fill(255, 10);
       ellipse(pos.x, pos.y, i*2, i*2);
       // vertex(pos.x, pos.y);
     }
